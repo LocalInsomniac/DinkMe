@@ -1,2 +1,2 @@
 server bool sv_dinkMe_player = true;
-server float sv_dinkMe_damage = 4;
+server float sv_dinkMe_damage = 3;

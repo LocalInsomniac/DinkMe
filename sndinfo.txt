@@ -1,0 +1,9 @@
+DinkMe/hit1 DM_HIT1
+$attenuation DinkMe/hit1 0.8
+DinkMe/hit2 DM_HIT2
+$attenuation DinkMe/hit2 0.8
+
+$random DinkMe/hit {
+	DinkMe/hit1
+	DinkMe/hit2
+}

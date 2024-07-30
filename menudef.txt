@@ -1,0 +1,9 @@
+OptionMenu "DinkMe_Options" {
+	Title "DinkMe Options"
+    Option "Players Can Get Headshot", "sv_dinkMe_player", "YesNo"
+	Slider "Headshot Damage Factor", "sv_dinkMe_damage", 1, 10, 0.5
+}
+
+AddOptionMenu "OptionsMenu" {
+    Submenu "DinkMe Options", "DinkMe_Options"
+}

@@ -1,0 +1,9 @@
+class DinkMe_AstralCaco : DinkMe_Cacodemon {
+	Default {
+		DinkMeHead.HeadZ 35, 40;
+	}
+}
+
+class DinkMe_Annihilator : DinkMe_BaronOfHell {}
+class DinkMe_FormerCaptain : DinkMe_ChaingunGuy {}
+class DinkMe_NightmareDemon : DinkMe_Demon {}

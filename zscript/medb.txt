@@ -1,0 +1,66 @@
+class DinkMe_NightmareImpMEDB : DinkMe_DoomImp {}
+class DinkMe_NightmareSpectreMEDB : DinkMe_Spectre {}
+class DinkMe_MeleeRevenantMEDB : DinkMe_Revenant {}
+class DinkMe_PistolZombieMEDB : DinkMe_Zombieman {}
+
+class DinkMe_HarkubusMEDB : DinkMe_Fatso {
+	Default {
+		Radius 41;
+		Height 66;
+		DinkMeHead.HeadZ 51, 66;
+	}
+}
+
+class DinkMe_RocketZombieMEDB : DinkMe_Zombieman {}
+class DinkMe_MorterZombieMEDB : DinkMe_Zombieman {}
+class DinkMe_ChaingunSpiderMEDB : DinkMe_Arachnotron {}
+
+class DinkMe_WatcherMEDB : DinkMeHead {
+	Default {
+		Radius 19;
+		Height 38;
+		DinkMeHead.HeadZ 16, 27;
+		DinkMeHead.HeadCone 22.5;
+	}
+}
+
+class DinkMe_ZombieMarineMEDB : DinkMe_Zombieman {}
+class DinkMe_ChainsawZombieMEDB : DinkMe_Zombieman {}
+class DinkMe_SuperShotgunGuyMEDB : DinkMe_ShotgunGuy {}
+class DinkMe_SpreadgunGuyMEDB : DinkMe_ShotgunGuy {}
+
+class DinkMe_WargrinMEDB : DinkMeHead {
+	Default {
+		Radius 15;
+		Height 46;
+		DinkMeHead.HeadZ 33, 46;
+		DinkMeHead.HeadCone 60;
+	}
+}
+
+class DinkMe_D64ArachnotronMEDB : DinkMe_Arachnotron {}
+
+class DinkMe_HindringMEDB : DinkMeHead {
+	Default {
+		Radius 24;
+		Height 52;
+		DinkMeHead.HeadZ 29, 49;
+		DinkMeHead.HeadCone 55;
+	}
+}
+
+class DinkMe_SuperDemonMEDB : DinkMe_Cyberdemon {}
+
+class DinkMe_HellionMEDB : DinkMeHead {
+	Default {
+		Radius 20;
+		Height 55;
+	}
+}
+
+class DinkMe_DevilImpMEDB : DinkMe_DoomImp {}
+class DinkMe_SawcubusMEDB : DinkMe_DoomImp {}
+class DinkMe_Cacodevil : DinkMe_Cacodemon {}
+class DinkMe_NailgunZombieMEDB : DinkMe_ShotgunGuy {}
+class DinkMe_AlphaDemonMEDB : DinkMe_Demon {}
+class DinkMe_DarkSquireMEDB : DinkMe_HellKnight {}

@@ -1,0 +1,113 @@
+class DinkMe_DoomPlayer : DinkMeHead {
+	Default {
+		Radius 12;
+		Height 50;
+	}
+}
+
+class DinkMe_Zombieman : DinkMe_DoomPlayer {
+	Default {
+		Radius 12;
+		Height 50;
+	}
+}
+
+class DinkMe_ShotgunGuy : DinkMe_Zombieman {}
+
+class DinkMe_ChaingunGuy : DinkMeHead {
+	Default {
+		Radius 15;
+		Height 55;
+	}
+}
+
+class DinkMe_DoomImp : DinkMeHead {
+	Default {
+		Radius 12;
+		Height 53;
+	}
+}
+
+class DinkMe_Demon : DinkMeHead {
+	Default {
+		Radius 15;
+		Height 50;
+		DinkMeHead.HeadZ 13, 36;
+		DinkMeHead.HeadCone 60;
+	}
+}
+
+class DinkMe_Spectre : DinkMe_Demon {}
+
+class DinkMe_Cacodemon : DinkMeHead {
+	Default {
+		Radius 30;
+		Height 58;
+		DinkMeHead.HeadZ 36, 41;
+		DinkMeHead.HeadCone 22.5;
+	}
+}
+
+class DinkMe_BaronOfHell : DinkMeHead {
+	Default {
+		Radius 16;
+		Height 70;
+	}
+}
+
+class DinkMe_HellKnight : DinkMe_BaronOfHell {}
+
+class DinkMe_Arachnotron : DinkMeHead {
+	Default {
+		Radius 36;
+		Height 50;
+		DinkMeHead.HeadZ 38, 50;
+	}
+}
+
+class DinkMe_PainElemental : DinkMeHead {
+	Default {
+		Radius 28;
+		Height 58;
+		DinkMeHead.HeadZ 36, 50;
+		DinkMeHead.HeadCone 30;
+	}
+}
+
+class DinkMe_Revenant : DinkMeHead {
+	Default {
+		Radius 15;
+		Height 75;
+	}
+}
+
+class DinkMe_Fatso : DinkMeHead {
+	Default {
+		Radius 28;
+		Height 60;
+		DinkMeHead.HeadZ 45, 60;
+		DinkMeHead.HeadCone 60;
+	}
+}
+
+class DinkMe_ArchVile : DinkMeHead {
+	Default {
+		Radius 15;
+		Height 72;
+	}
+}
+
+class DinkMe_Cyberdemon : DinkMeHead {
+	Default {
+		Radius 30;
+		Height 104;
+	}
+}
+
+class DinkMe_WolfensteinSS : DinkMe_Zombieman {}
+
+class DinkMe_CommanderKeen : DinkMeHead {
+	Default {
+		DinkMeHead.HeadZ 40, 50;
+	}
+}

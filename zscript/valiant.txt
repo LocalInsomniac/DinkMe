@@ -1,0 +1,18 @@
+class DinkMe_ValiantGuy : DinkMe_DoomPlayer {}
+class DinkMe_ValiantImp : DinkMe_DoomImp {}
+class DinkMe_ValiantDemon : DinkMe_Demon {}
+class DinkMe_ValiantSpectre : DinkMe_Spectre {}
+class DinkMe_ValiantSuperMancubus : DinkMe_Fatso {}
+class DinkMe_ValiantPyroDemon : DinkMe_HellKnight {}
+class DinkMe_ValiantCybruiser : DinkMe_BaronOfHell {}
+class DinkMe_ValiantArachnotron : DinkMe_Arachnotron {}
+
+class DinkMe_ValiantArachnorb : DinkMeHead {
+	Default {
+		Height 56;
+		DinkMeHead.HeadZ 44, 56;
+	}
+}
+
+class DinkMe_SuicideBomber : DinkMe_Zombieman {}
+class DinkMe_ValiantFinalBoss : DinkMe_Archvile {}

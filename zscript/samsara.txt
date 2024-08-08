@@ -1,4 +1,5 @@
 class DinkMe_WolfenPlayer : DinkMe_DoomPlayer {}
+class DinkMe_WolfenPlayer2 : DinkMe_DoomPlayer {}
 class DinkMe_GrondovalPlayer : DinkMe_DoomPlayer {}
 class DinkMe_MarathonPlayer : DinkMe_DoomPlayer {}
 class DinkMe_Zombieman2 : DinkMe_Zombieman {}
@@ -17,3 +18,80 @@ class DinkMe_Nazi2 : DinkMe_WolfensteinSS {}
 class DinkMe_Revenant2 : DinkMe_Revenant {}
 class DinkMe_PainElemental2 : DinkMe_PainElemental {}
 class DinkMe_Arachnotron2 : DinkMe_Arachnotron {}
+
+class DinkMe_TotenkopfGuard : DinkMeHead {
+	Default {
+		Radius 11;
+		Height 48;
+	}
+}
+
+class DinkMe_TotenkopfGuard2 : DinkMe_TotenkopfGuard {}
+class DinkMe_TotenkopfRifleman : DinkMe_TotenkopfGuard {}
+class DinkMe_TotenkopfInfantry : DinkMe_TotenkopfGuard {}
+class DinkMe_TotenkopfInfantry2 : DinkMe_TotenkopfGuard {}
+class DinkMe_TotenkopfOfficer : DinkMe_TotenkopfGuard {}
+class DinkMe_TotenkopfOfficer2 : DinkMe_TotenkopfGuard {}
+
+class DinkMe_TotenkopfHansGrosse : DinkMeHead {
+	Default {
+		Radius 24;
+		Height 60;
+	}
+}
+
+class DinkMe_TotenkopfMonk : DinkMeHead {
+	Default {
+		Radius 12;
+		Height 50;
+	}
+}
+
+class DinkMe_TotenkopfMonk2 : DinkMe_TotenkopfMonk {}
+class DinkMe_TotenkopfMutant : DinkMe_TotenkopfGuard {}
+class DinkMe_TotenkopfMutant2 : DinkMe_TotenkopfGuard {}
+class DinkMe_TotenkopfScientist : DinkMe_TotenkopfGuard {}
+class DinkMe_TotenkopfScientist2 : DinkMe_TotenkopfGuard {}
+class DinkMe_TotenkopfSS : DinkMe_TotenkopfGuard {}
+class DinkMe_TotenkopfSSRifleman : DinkMe_TotenkopfSS {}
+class DinkMe_TotenkopfSSInfantry : DinkMe_TotenkopfSS {}
+class DinkMe_TotenkopfSSOfficer : DinkMe_TotenkopfSS {}
+class DinkMe_TotenkopfSSOfficer2 : DinkMe_TotenkopfSS {}
+class DinkMe_TotenkopfWaffenSS : DinkMe_TotenkopfSS {}
+class DinkMe_TotenkopfWaffenSS2 : DinkMe_TotenkopfSS {}
+class DinkMe_TotenkopfWaffenSS3 : DinkMe_TotenkopfSS {}
+class DinkMe_TotenkopfWaffenSSOfficer : DinkMe_TotenkopfSS {}
+
+class DinkMe_TotenkopfNarbengesicht : DinkMeHead {
+	Default {
+		Radius 22;
+		Height 54;
+	}
+}
+
+class DinkMe_TotenkopfSchabbsMutant : DinkMeHead {
+	Default {
+		Radius 24;
+		Height 58;
+	}
+}
+
+class DinkMe_TotenkopfMechanoidStormtrooper : DinkMeHead {
+	Default {
+		Radius 14;
+		Height 52;
+		DinkMeHead.HeadZ 42, 48;
+		DinkMeHead.HeadCone 45;
+	}
+}
+
+class DinkMe_TotenkopfTrooperFlamethrower : DinkMeHead {
+	Default {
+		Radius 14;
+		Height 52;
+		DinkMeHead.HeadZ 41, 48;
+	}
+}
+
+class DinkMe_TotenkopfTrooperChaingun : DinkMe_TotenkopfTrooperFlamethrower {}
+class DinkMe_TotenkopfTrooperPanzerschreck : DinkMe_TotenkopfTrooperChaingun {}

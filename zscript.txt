@@ -1,10 +1,61 @@
 version "4.10"
 
 class DinkMe : EventHandler {
+	int reapplyTick;
+	
+	override void WorldTick() {
+		++reapplyTick;
+		
+		if (reapplyTick >= 35) {
+			for (int i = 0; i < MAXPLAYERS; i++) {
+				if (!playerInGame[i]) {
+					continue;
+				}
+				
+				let pmo = players[i].mo;
+				
+				if (!pmo || pmo.health <= 0) {
+					continue;
+				}
+				
+				let head = pmo.FindInventory("DinkMeHead", true);
+				
+				if (head) {
+					double hRadius = head.radius;
+					double hHeight = head.height;
+					
+					if ((hRadius != -1 && pmo.radius != hRadius) || (hRadius != -1 && pmo.height != hHeight)) {
+						ApplyToPlayerPawn(pmo);
+					}
+				}
+			}
+			
+			reapplyTick = 0;
+		}
+	}
+	
 	override void WorldThingSpawned(WorldEvent e) {
+		ApplyToMonster(e);
+	}
+	
+	override void WorldThingRevived(WorldEvent e) {
+		ApplyToMonster(e);
+	}
+	
+	override void PlayerSpawned(PlayerEvent e) {
+		ApplyToPlayer(e);
+	}
+	
+	override void PlayerRespawned(PlayerEvent e) {
+		ApplyToPlayer(e);
+	}
+	
+	static void ApplyToMonster(WorldEvent e) {
 		let mo = e.thing;
 		
 		if (mo && mo.bIsMonster) {
+			mo.A_TakeInventory("DinkMeHead");
+			
 			string className = "DinkMe_" .. mo.GetClassName();
 			class<DinkMeHead> cls = className;
 			
@@ -19,18 +70,6 @@ class DinkMe : EventHandler {
 		}
 	}
 	
-	override void PlayerEntered(PlayerEvent e) {
-		ApplyToPlayer(e);
-	}
-	
-	override void PlayerSpawned(PlayerEvent e) {
-		ApplyToPlayer(e);
-	}
-	
-	override void PlayerRespawned(PlayerEvent e) {
-		ApplyToPlayer(e);
-	}
-	
 	static void ApplyToPlayer(PlayerEvent e) {
 		if (sv_dinkMe_player) {
 			PlayerInfo player = players[e.playerNumber];
@@ -39,23 +78,20 @@ class DinkMe : EventHandler {
 				PlayerPawn pmo = PlayerPawn(player.mo);
 				
 				if (pmo) {
-					string className = "DinkMe_" .. pmo.GetClassName();
-					class<DinkMeHead> cls = className;
-					
-					if (!cls) {
-						className = "DinkMe_" .. pmo.GetSpecies();
-						cls = className;
-					}
-					
-					if (cls) {
-						if (pmo.CountInv(cls)) {
-							pmo.A_TakeInventory(cls);
-						}
-						
-						pmo.A_GiveInventory(cls);
-					}
+					ApplyToPlayerPawn(pmo);
 				}
 			}
+		}
+	}
+	
+	static void ApplyToPlayerPawn(PlayerPawn pmo) {
+		pmo.A_TakeInventory("DinkMeHead");
+		
+		string className = "DinkMe_" .. pmo.GetClassName();
+		class<DinkMeHead> cls = className;
+		
+		if (cls) {
+			pmo.A_GiveInventory(cls);
 		}
 	}
 }
@@ -103,9 +139,7 @@ class DinkMeHead : Inventory {
 			headCone = 180;
 		}
 		
-		other.A_SetSize(radius, height, true);
-		
-		if (other is "PlayerPawn") {
+		if (other.A_SetSize(radius, height, true) && other is "PlayerPawn") {
 			double viewHeight = headMinZ + ((headMaxZ - headMinZ) * 0.5);
 			
 			let pmo = PlayerPawn(other);
